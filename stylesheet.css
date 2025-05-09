@@ -1,0 +1,16 @@
+.moover-overlay {
+  background-color: rgba(24, 24, 37, 0.3);
+  font-size: 20px;
+  color: #cdd6f4;
+}
+
+.moover-grid {
+  background-color: rgba(24, 24, 37, 0.9);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.moover-key-label {
+  margin: auto 24px;
+  text-align: left;
+}

@@ -1,0 +1,8 @@
+{
+  "uuid": "moover@adaviloper.com",
+  "name": "Moover",
+  "description": "Moove windows around",
+  "version": 1,
+  "shell-version": ["48"],
+  "url": ""
+}

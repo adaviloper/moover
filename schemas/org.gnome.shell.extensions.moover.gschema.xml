@@ -1,0 +1,9 @@
+<schemalist>
+  <schema id="org.gnome.shell.extensions.moover" path="/org/gnome/shell/extensions/moover/">
+    <key name="move-focused-window" type="as">
+      <default><![CDATA[['<Super><Control><Alt><Shift>m']]]></default>
+      <summary>Keybinding to trigger Moover</summary>
+    </key>
+  </schema>
+</schemalist>
+
