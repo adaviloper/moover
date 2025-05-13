@@ -141,6 +141,7 @@ export default class MooverExtension extends Extension {
         const padding = 32;
 
         const positions = {
+            ' ': [0, 1],
             'q': [0, 1 / 2],
             'w': [1 / 4, 1 / 4],
             'e': [1 / 6, 2 / 3],
