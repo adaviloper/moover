@@ -4,5 +4,5 @@
   "description": "Moove windows around",
   "version": 1,
   "shell-version": ["48"],
-  "url": ""
+  "settings-schema": "org.gnome.shell.extensions.moover"
 }

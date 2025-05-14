@@ -15,7 +15,7 @@ export default class MooverExtension extends Extension {
     _overlayTimeoutId = null;
 
     enable() {
-        settings = new Gio.Settings({ schema_id: 'org.gnome.shell.extensions.moover' });
+        settings = this.getSettings();
 
         Main.wm.addKeybinding(
             keyBindingName,
