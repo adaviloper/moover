@@ -118,11 +118,35 @@ export default class MooverExtension extends Extension {
 
         this._overlay.connect('key-press-event', (_, event) => {
             const keyval = event.get_key_symbol();
+
             if (keyval === Clutter.KEY_Escape) {
                 this._removeOverlay();
                 return Clutter.EVENT_STOP;
             }
 
+            // Move window using arrow keys
+            const win = global.display.focus_window;
+            if (win) {
+                let rect = win.get_frame_rect();
+                const step = 200;
+
+                switch (keyval) {
+                    case Clutter.KEY_Up:
+                        win.move_frame(true, rect.x, rect.y - step);
+                        break;
+                    case Clutter.KEY_Down:
+                        win.move_frame(true, rect.x, rect.y + step);
+                        break;
+                    case Clutter.KEY_Left:
+                        win.move_frame(true, rect.x - step, rect.y);
+                        break;
+                    case Clutter.KEY_Right:
+                        win.move_frame(true, rect.x + step, rect.y);
+                        break;
+                    default:
+                        break;
+                }
+            }
             const key = event.get_key_unicode().toLowerCase();
             this._handleKeyPress(key);
             this._resetOverlayTimeout();
